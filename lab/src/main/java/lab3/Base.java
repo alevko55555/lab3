@@ -23,8 +23,8 @@ public class Base {
                         .map(elem -> new AirportParser(elem._1()))
                         .mapToPair(split ->
                                 new Tuple2<>(
-                                        split.getIdAirport(),
-                                        //(long)Double.parseDouble(split.getIdAirport()),
+                                        //split.getIdAirport(),
+                                        (long)Double.parseDouble(split.getIdAirport()),
                                         split.getInfoAirport()
                                 )
                         )
@@ -37,14 +37,14 @@ public class Base {
                 .mapToPair(split ->
                         new Tuple2<>(
                                 new Tuple2<>(
-                                        split.getIdAirportFrom(),
-                                        split.getIdAirportDest()
-                                        //Long.parseLong(split.getIdAirportFrom()),
-                                        //Long.parseLong(split.getIdAirportDest())
+                                        //split.getIdAirportFrom(),
+                                        //split.getIdAirportDest()
+                                        Long.parseLong(split.getIdAirportFrom()),
+                                        Long.parseLong(split.getIdAirportDest())
                                 ),
                                 new Tuple2<>(
-                                        split.getDelay(),
-                                        //(long)Double.parseDouble(split.getDelay()),
+                                        //split.getDelay(),
+                                        (long)Double.parseDouble(split.getDelay()),
                                         split.getFlagCanceled()
                                 )
                         )

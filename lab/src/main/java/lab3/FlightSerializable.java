@@ -39,11 +39,9 @@ public class FlightSerializable implements Serializable {
         return ((float)a/b)*100;
     }
     public float getPercentDelayedFlight() {
-        //return ((float)numberOfDelayedFlights/numberOfFlights)*100;
         return calculatePercentAFromB(numberOfDelayedFlights, numberOfFlights);
     }
     public float getPercentCanceledFlight(){
-        //return ((float)canceledFlight/numberOfFlights)*100;
         return calculatePercentAFromB(canceledFlight, numberOfFlights);
     }
     public long getMaximumLatency() {
@@ -67,12 +65,6 @@ public class FlightSerializable implements Serializable {
                 " PercentDelayedFlight =  " +
                 String.format("%.2f%%", getPercentDelayedFlight()) +
                 " PercentCanceledFlight =  " +
-                String.format("%.2f%%", getPercentCanceledFlight()) +
-                " DelayedFlight = " +
-                getNumberOfDelayedFlights() +
-                " Flight = " +
-                getNumberOfFlights() +
-                " Canceled = " +
-                getCanceledFlight();
+                String.format("%.2f%%", getPercentCanceledFlight());
     }
 }

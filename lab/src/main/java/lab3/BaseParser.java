@@ -16,9 +16,9 @@ public class BaseParser {
     String getString(int index) {
         return arrayOfParts.get(index);
     }
-    Long getLong(int index) {
+    /*Long getLong(int index) {
         String str = arrayOfParts.get(index);
         String num = str.isEmpty() ? ZERO_DOUBLE : str;
         return (long)Double.parseDouble(num);
-    }
+    }*/
 }

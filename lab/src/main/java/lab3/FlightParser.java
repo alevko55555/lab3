@@ -11,10 +11,10 @@ public class FlightParser extends BaseParser{
         super(str);
     }
     public String getDelayIdAirport() {
-        return getString(DELAY_COL);
+        return getString(ID_AIRPORT_TO);
     }
     public String getDelay() {
-        String delay = getString(TIME_);
+        String delay = getString(TIME_DELAY);
         return delay.isEmpty() ? ZERO_DOUBLE : delay;
     }
 }

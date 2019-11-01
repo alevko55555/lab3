@@ -46,9 +46,18 @@ public class Base {
                 )
                 .aggregateByKey(
                         new FlightSerializable(),
-                        (stored, flight) -> stored.append(flight._1(), flight._2()),
+                        (stored, flight) -> stored.append(Long.parseLong(flight._1()), flight._2()),
                         FlightSerializable::append
-                ).map()
+                )
+                .map(tuple ->
+                        new Tuple2<>(
+                                new Tuple2<>(
+                                        broadcast.value().get(tuple._1()._1()),
+                                        broadcast.value().get(tuple._1()._2())
+                                ),
+                                tuple._2()
+                        )
+                ).saveAsTextFile(args[2]);
     }
 }
 

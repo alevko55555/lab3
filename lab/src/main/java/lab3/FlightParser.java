@@ -14,7 +14,7 @@ public class FlightParser extends BaseParser{
         return getString(DELAY_COL);
     }
     public String getDelay() {
-        String delay = getString(DELAY_NEW_COL);
+        String delay = getString(TIME_);
         return delay.isEmpty() ? ZERO_DOUBLE : delay;
     }
 }

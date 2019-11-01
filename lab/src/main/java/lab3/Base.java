@@ -31,7 +31,20 @@ public class Base {
         sc.textFile(args[1])
                 .zipWithIndex()
                 .filter(elem->elem._2() != 0)
-                .map(elem -> new FlightParser(elem._1())).
+                .map(elem -> new FlightParser(elem._1()))
+                .mapToPair(split ->
+                        new Tuple2<>(
+                                new Tuple2<>(
+                                        split.getIdAirportFrom(),
+                                        split.getIdAirportDest()
+                                ),
+                                new Tuple2<>(
+                                        split.getDelay(),
+                                        split.getFlagCanceled()
+                                )
+                        )
+                )
+                .aggregateByKey()
     }
 }
 

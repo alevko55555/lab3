@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 public class FlightSerializable implements Serializable {
     private static final long ZERO = 0;
+    private static final long ONE = 1;
     private long maximumLatency;
     private long numberOfFlights;
     private long numberOfDelayedFlights;
@@ -29,8 +30,9 @@ public class FlightSerializable implements Serializable {
         return new FlightSerializable(
                 Math.max(maximumLatency, lateness),
                 numberOfFlights++,
-                numberOfDelayedFlights + ()
-        )
+                numberOfDelayedFlights + (lateness != 0 ? ONE : ZERO),
+                canceledFlight + (canceled ? ONE : 0)
+        );
     }
     public long getMaximumLatency() {
         return maximumLatency;

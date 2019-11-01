@@ -5,6 +5,7 @@ import java.io.Serializable;
 public class FlightSerializable implements Serializable {
     private static final long ZERO = 0;
     private static final long ONE = 1;
+    private static final long TOTAL = 100;
     private long maximumLatency;
     private long numberOfFlights;
     private long numberOfDelayedFlights;
@@ -35,7 +36,7 @@ public class FlightSerializable implements Serializable {
         );
     }
     public float calculatePercentAFromB(long a, long b){
-        return (float)(a)
+        return (float)(a*TOTAL/b);
     }
     public long getMaximumLatency() {
         return maximumLatency;

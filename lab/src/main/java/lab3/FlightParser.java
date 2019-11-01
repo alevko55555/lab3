@@ -21,6 +21,6 @@ public class FlightParser extends BaseParser{
         return getString(ID_AIRPORT_FROM);
     }
     public Boolean getFlagCanceled() {
-        return getString(FLAG_CANCELED) == 1;
+        return (long)Double.parseDouble(getString(FLAG_CANCELED)) == 1;
     }
 }

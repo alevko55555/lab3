@@ -32,7 +32,7 @@ public class FlightSerializable implements Serializable {
                 Math.max(maximumLatency, lateness),
                 numberOfFlights++,
                 numberOfDelayedFlights + (lateness != 0 ? ONE : ZERO),
-                canceledFlight + (canceled ? ONE : 0)
+                canceledFlight + (canceled ? ONE : ZERO)
         );
     }
     public float calculatePercentAFromB(long a, long b){

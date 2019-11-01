@@ -28,7 +28,10 @@ public class Base {
                         )
                         .collectAsMap()
         );
-
+        sc.textFile(args[1])
+                .zipWithIndex()
+                .filter(elem->elem._2() != 0)
+                .map(elem -> new FlightParser(elem._1())).
     }
 }
 

@@ -15,4 +15,8 @@ public class BaseParser {
     String getString(int index) {
         return arrayOfParts.get(index);
     }
+    Long getLong(int index) {
+        String id = getString(ID_AIRPORT_DEST);
+        return id.isEmpty() ? ZERO_DOUBLE : id;
+    }
 }

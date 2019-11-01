@@ -47,7 +47,7 @@ public class Base {
                 )
                 .aggregateByKey(
                         new FlightSerializable(),
-                        (stored, flight) -> stored.append((long)Double.parseDouble(flight._1()), flight._2()),
+                        (stored, flight) -> stored.append(flight._1(), flight._2()),
                         FlightSerializable::append
                 )
                 .map(tuple ->

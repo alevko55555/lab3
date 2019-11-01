@@ -1,4 +1,9 @@
 package lab3;
 
-public class FlightSerializable {
+import java.io.Serializable;
+
+public class FlightSerializable implements Serializable {
+    public FlightSerializable(){
+        
+    }
 }

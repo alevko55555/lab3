@@ -44,7 +44,10 @@ public class Base {
                                 )
                         )
                 )
-                .aggregateByKey()
+                .aggregateByKey(
+                        new FlightParser(),
+                        
+                )
     }
 }
 

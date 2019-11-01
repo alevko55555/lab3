@@ -2,6 +2,9 @@ package lab3;
 
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaSparkContext;
+import org.apache.spark.broadcast.Broadcast;
+
+import java.util.Map;
 
 public class Base {
     public static void main(String[] args) {
@@ -11,6 +14,11 @@ public class Base {
         }
         SparkConf conf = new SparkConf().setAppName("lab3");
         JavaSparkContext sc = new JavaSparkContext(conf);
+
+        final Broadcast<Map<Long, String>> broadcast = sc.broadcast(
+              sc.textFile(args[0])
+                      .zipWithIndex()
+                      .filter(elem->elem._2() != 0).map(elem-> new BaseParser[])
+        );
     }
 
-}

@@ -10,7 +10,7 @@ import java.util.Map;
 public class Base {
     public static void main(String[] args) {
         if (args.length != 3) {
-            System.err.println("Usage: lab3.Base <input path> <output path>");
+            System.err.println("Usage: lab3.Base <input path> <input path> <output path>");
             System.exit(-1);
         }
         SparkConf conf = new SparkConf().setAppName("lab3");

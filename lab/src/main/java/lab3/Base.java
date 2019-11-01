@@ -36,11 +36,11 @@ public class Base {
                 .mapToPair(split ->
                         new Tuple2<>(
                                 new Tuple2<>(
-                                        split.getIdAirportFrom(),
-                                        split.getIdAirportDest()
+                                        Long.parseLong(split.getIdAirportFrom()),
+                                        Long.parseLong(split.getIdAirportDest())
                                 ),
                                 new Tuple2<>(
-                                        split.getDelay(),
+                                        Long.parseLong(split.getDelay()),
                                         split.getFlagCanceled()
                                 )
                         )

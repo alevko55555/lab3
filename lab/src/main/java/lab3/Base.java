@@ -16,7 +16,7 @@ public class Base {
         SparkConf conf = new SparkConf().setAppName("lab3");
         JavaSparkContext sc = new JavaSparkContext(conf);
 
-        final Broadcast<Map<String, String>> broadcast = sc.broadcast(
+        final Broadcast<Map<Long, String>> broadcast = sc.broadcast(
                 sc.textFile(args[0])
                         .zipWithIndex()
                         .filter(elem -> elem._2() != 0)

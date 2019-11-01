@@ -39,12 +39,12 @@ public class FlightSerializable implements Serializable {
         return ((float)a/b)*100;
     }
     public float getPercentDelayedFlight() {
-        return ((float)numberOfDelayedFlights/numberOfFlights)*100;
-        //return calculatePercentAFromB(numberOfDelayedFlights, numberOfFlights);
+        //return ((float)numberOfDelayedFlights/numberOfFlights)*100;
+        return calculatePercentAFromB(numberOfDelayedFlights, numberOfFlights);
     }
     public float getPercentCanceledFlight(){
-        return ((float)canceledFlight/numberOfFlights)*100;
-        //return calculatePercentAFromB(canceledFlight, numberOfFlights);
+        //return ((float)canceledFlight/numberOfFlights)*100;
+        return calculatePercentAFromB(canceledFlight, numberOfFlights);
     }
     public long getMaximumLatency() {
         return maximumLatency;

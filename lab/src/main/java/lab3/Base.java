@@ -23,7 +23,7 @@ public class Base {
                         .map(elem -> new AirportParser(elem._1()))
                         .mapToPair(split ->
                                 new Tuple2<>(
-                                        Long.parseLong(split.getIdAirport())),
+                                        Long.parseLong(split.getIdAirport()),
                                         split.getInfoAirport()
                                 )
                         )

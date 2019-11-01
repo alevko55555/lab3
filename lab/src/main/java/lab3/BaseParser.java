@@ -1,11 +1,11 @@
-package lab2;
+package lab3;
 
 import java.util.ArrayList;
 
-public class ParserUtils {
+public class BaseParser {
     private ArrayList<String> part;
 
-    ParserUtils(String str) {
+    BaseParser(String str) {
         part = new ArrayList<>();
         String[] part1 = str.split(",");
         for(int i = 0; i < part1.length; i++) {

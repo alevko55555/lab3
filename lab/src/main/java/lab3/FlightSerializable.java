@@ -25,7 +25,9 @@ public class FlightSerializable implements Serializable {
                 canceledFlight + next.canceledFlight
         );
     }
-    public FlightSerializable append(long lateness, boolean )
+    public FlightSerializable append(long lateness, boolean canceled) {
+        
+    }
     public long getMaximumLatency() {
         return maximumLatency;
     }

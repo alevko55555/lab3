@@ -36,8 +36,8 @@ public class Base {
                 .mapToPair(split ->
                         new Tuple2<>(
                                 new Tuple2<>(
-                                        (long)Double.parseDouble(split.getIdAirportFrom()),
-                                        (long)Double.parseDouble(split.getIdAirportDest())
+                                        Long.parseLong(split.getIdAirportFrom()),
+                                        Long.parseLong(split.getIdAirportDest())
                                 ),
                                 new Tuple2<>(
                                         (long)Double.parseDouble(split.getDelay()),

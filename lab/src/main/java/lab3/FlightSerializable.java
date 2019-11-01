@@ -66,8 +66,8 @@ public class FlightSerializable implements Serializable {
                 " PercentCanceledFlight =  " +
                 String.format("%.2f%%", getPercentCanceledFlight()) +
                 " DelayedFlight = " +
-                String.format("%.2f", getNumberOfDelayedFlights()) +
+                getNumberOfDelayedFlights() +
                 " Flight = " +
-                String.format("%.2f", getNumberOfFlights());
+                getNumberOfFlights();
     }
 }

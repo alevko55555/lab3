@@ -3,6 +3,7 @@ package lab3;
 import java.util.ArrayList;
 
 public class BaseParser {
+    private static final String ZERO_DOUBLE = "0.0";
     private ArrayList<String> arrayOfParts;
 
     BaseParser(String str) {
@@ -16,7 +17,8 @@ public class BaseParser {
         return arrayOfParts.get(index);
     }
     Long getLong(int index) {
-        String id = getString(ID_AIRPORT_DEST);
-        return id.isEmpty() ? ZERO_DOUBLE : id;
+        String str = arrayOfParts.get(index);
+        String num = str.isEmpty() ? ZERO_DOUBLE : str;
+        return (long)Double.parseDouble(num);
     }
 }

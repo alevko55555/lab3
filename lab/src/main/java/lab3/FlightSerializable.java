@@ -17,7 +17,12 @@ public class FlightSerializable implements Serializable {
     public FlightSerializable(){
         this(Long.MIN_VALUE, ZERO, ZERO, ZERO);
     }
+    public FlightSerializable append(FlightSerializable comp) {
+        return new FlightSerializable(
+                max(maximumLatency, comp.maximumLatency),
 
+        )
+    }
     public long getMaximumLatency() {
         return maximumLatency;
     }

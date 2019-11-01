@@ -3,7 +3,7 @@ package lab3;
 import java.io.Serializable;
 
 public class FlightSerializable implements Serializable {
-    private long can
+    private long canceledFlight;
     public FlightSerializable(){
 
     }

@@ -34,8 +34,8 @@ public class FlightSerializable implements Serializable {
                 canceledFlight + (canceled ? ONE : 0)
         );
     }
-    public calculatePercent(){
-        
+    public float calculatePercent(long a, long b){
+        return (float)
     }
     public long getMaximumLatency() {
         return maximumLatency;

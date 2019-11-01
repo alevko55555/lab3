@@ -36,7 +36,7 @@ public class FlightSerializable implements Serializable {
         );
     }
     public float calculatePercentAFromB(long a, long b){
-        return ((float)(a/b)*TOTAL);
+        return ((float)(a/b))*TOTAL;
     }
     public float getPercentDelayedFlight() {
         return calculatePercentAFromB(numberOfDelayedFlights, numberOfFlights);

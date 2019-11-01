@@ -35,9 +35,9 @@ public class FlightSerializable implements Serializable {
                 canceledFlight + (canceled ? ONE : ZERO)
         );
     }
-    /*public float calculatePercentAFromB(long a, long b){
-        return ((float)(a/b))*TOTAL;
-    }*/
+    public float calculatePercentAFromB(long a, long b){
+        return ((float)a/b)*100;
+    }
     public float getPercentDelayedFlight() {
         return ((float)numberOfDelayedFlights/numberOfFlights)*100;
         //return calculatePercentAFromB(numberOfDelayedFlights, numberOfFlights);
@@ -57,6 +57,9 @@ public class FlightSerializable implements Serializable {
     public long getNumberOfDelayedFlights() {
         return numberOfDelayedFlights;
     }
+    public long getCanceledFlight() {
+        return canceledFlight;
+    }
 
     @Override
     public String toString() {
@@ -68,6 +71,8 @@ public class FlightSerializable implements Serializable {
                 " DelayedFlight = " +
                 getNumberOfDelayedFlights() +
                 " Flight = " +
-                getNumberOfFlights();
+                getNumberOfFlights() +
+                " Canceled = " +
+                getCanceledFlight();
     }
 }

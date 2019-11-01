@@ -53,8 +53,8 @@ public class FlightSerializable implements Serializable {
     public String toString() {
         return "MaximumLatency = " + getMaximumLatency() +
                 " PercentDelayedFlight =  " +
-                String.format("%.2f", getPercentDelayedFlight()) +
+                String.format("%.2f%%", getPercentDelayedFlight()) +
                 " PercentCanceledFlight =  " +
-                String.format("%.2f", getPercentCanceledFlight());
+                String.format("%.2f%%", getPercentCanceledFlight());
     }
 }

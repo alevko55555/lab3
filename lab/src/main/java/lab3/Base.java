@@ -45,9 +45,10 @@ public class Base {
                         )
                 )
                 .aggregateByKey(
-                        new FlightParser(),
-                        (stored, flight) -> stored.append(flight._1())
-                )
+                        new FlightSerializable(),
+                        (stored, flight) -> stored.append(flight._1(), flight._2()),
+                        FlightSerializable::append
+                ).map()
     }
 }
 

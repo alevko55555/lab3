@@ -17,12 +17,15 @@ public class FlightSerializable implements Serializable {
     public FlightSerializable(){
         this(Long.MIN_VALUE, ZERO, ZERO, ZERO);
     }
-    public FlightSerializable append(FlightSerializable comp) {
+    public FlightSerializable append(FlightSerializable next) {
         return new FlightSerializable(
-                max(maximumLatency, comp.maximumLatency),
-
-        )
+                Math.max(maximumLatency, next.maximumLatency),
+                numberOfFlights + next.numberOfFlights,
+                numberOfDelayedFlights + next.numberOfDelayedFlights,
+                canceledFlight + next.canceledFlight
+        );
     }
+    public FlightSerializable append(long latency)
     public long getMaximumLatency() {
         return maximumLatency;
     }

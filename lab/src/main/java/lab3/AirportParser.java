@@ -7,8 +7,8 @@ public class AirportParser extends BaseParser{
     public AirportParser(String str) {
         super(str);
     }
-    public Long getIdAirport() {
-        return getLong(ID_ROW);
+    public String getIdAirport() {
+        return getString(ID_ROW);
     }
     public String getInfoAirport() {
         return getString(NAME_ROW);

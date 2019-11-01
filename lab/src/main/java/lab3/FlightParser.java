@@ -11,14 +11,18 @@ public class FlightParser extends BaseParser{
         super(str);
     }
     public String getIdAirportDest() {
-        return getString(ID_AIRPORT_DEST);
+        String id = getString(ID_AIRPORT_DEST);
+        return id.isEmpty() ? ZERO_DOUBLE : id;
+        //return getString(ID_AIRPORT_DEST);
     }
     public String getDelay() {
         String delay = getString(TIME_DELAY);
         return delay.isEmpty() ? ZERO_DOUBLE : delay;
     }
     public String getIdAirportFrom(){
-        return getString(ID_AIRPORT_FROM);
+        String id = getString(ID_AIRPORT_FROM);
+        return id.isEmpty() ? ZERO_DOUBLE : id;
+        //return getString(ID_AIRPORT_FROM);
     }
     public Boolean getFlagCanceled() {
         return (long)Double.parseDouble(getString(FLAG_CANCELED)) == 1;

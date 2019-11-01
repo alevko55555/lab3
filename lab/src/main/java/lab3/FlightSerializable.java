@@ -8,6 +8,6 @@ public class FlightSerializable implements Serializable {
     private long numberOfDelayedFlights;
     private long canceledFlight;
     public FlightSerializable(){
-
+        this()
     }
 }

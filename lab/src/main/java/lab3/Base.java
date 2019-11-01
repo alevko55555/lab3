@@ -28,7 +28,7 @@ public class Base {
                         )
                         .collectAsMap()
         );
-        
+
     }
 }
 

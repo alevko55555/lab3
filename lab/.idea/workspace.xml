@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c7f79f8-6bb3-4444-a0f5-a5cc935b2884" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/lab3/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab3/Base.java" afterDir="false" />
-    </list>
+    <list default="true" id="4c7f79f8-6bb3-4444-a0f5-a5cc935b2884" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,10 +68,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="588" y="214" width="847" height="677" key="#Project_Structure/67.27.1853.1053@67.27.1853.1053" timestamp="1572360489069" />
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1572360561288">
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1572625538711">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1572360561288" />
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1572625538711" />
     <state x="466" y="187" key="SettingsEditor" timestamp="1572363812158">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

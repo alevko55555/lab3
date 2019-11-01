@@ -16,10 +16,11 @@ public class Base {
         SparkConf conf = new SparkConf().setAppName("lab3");
         JavaSparkContext sc = new JavaSparkContext(conf);
 
-        final Broadcast<Map<String, String>> broadcast = sc.broadcast(
+        final Broadcast<Map<Long, String>> broadcast = sc.broadcast(
                 sc.textFile(args[0])
                         .zipWithIndex()
-                        .filter(elem -> elem._2() != 0).map(elem -> new AirportParser(elem._1()))
+                        .filter(elem -> elem._2() != 0)
+                        .map(elem -> new AirportParser(elem._1()))
                         .mapToPair(split ->
                                 new Tuple2<>(
                                         split.getIdAirport(),
@@ -46,7 +47,7 @@ public class Base {
                 )
                 .aggregateByKey(
                         new FlightSerializable(),
-                        (stored, flight) -> stored.append(Long.parseLong(flight._1()), flight._2()),
+                        (stored, flight) -> stored.append((long)Double.parseDouble(flight._1()), flight._2()),
                         FlightSerializable::append
                 )
                 .map(tuple ->

@@ -18,7 +18,8 @@ public class Base {
         final Broadcast<Map<Long, String>> broadcast = sc.broadcast(
               sc.textFile(args[0])
                       .zipWithIndex()
-                      .filter(elem->elem._2() != 0).map(elem-> new BaseParser[])
+                      .filter(elem->elem._2() != 0).map(elem-> new BaseParser(elem._1()))
+                      .mapToPair()
         );
     }
 

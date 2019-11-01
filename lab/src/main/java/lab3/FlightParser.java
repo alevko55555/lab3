@@ -13,7 +13,6 @@ public class FlightParser extends BaseParser{
     public String getIdAirportDest() {
         String id = getString(ID_AIRPORT_DEST);
         return id.isEmpty() ? ZERO_DOUBLE : id;
-        //return getString(ID_AIRPORT_DEST);
         //return getLong(ID_AIRPORT_DEST);
     }
     public String getDelay() {
@@ -24,7 +23,6 @@ public class FlightParser extends BaseParser{
     public String getIdAirportFrom(){
         String id = getString(ID_AIRPORT_FROM);
         return id.isEmpty() ? ZERO_DOUBLE : id;
-        //return getString(ID_AIRPORT_FROM);
         //return getLong(ID_AIRPORT_FROM);
     }
     public Boolean getFlagCanceled() {
